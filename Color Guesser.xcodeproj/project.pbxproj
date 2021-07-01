@@ -7,35 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E922EF14267BD6470014612C /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922EF13267BD6470014612C /* SoundController.swift */; };
-		E9B556CE266802880066C8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B556CD266802880066C8C1 /* AppDelegate.swift */; };
-		E9B556D0266802880066C8C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B556CF266802880066C8C1 /* SceneDelegate.swift */; };
-		E9B556D2266802880066C8C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B556D1266802880066C8C1 /* ViewController.swift */; };
-		E9B556D5266802880066C8C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B556D3266802880066C8C1 /* Main.storyboard */; };
-		E9B556D72668028A0066C8C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B556D62668028A0066C8C1 /* Assets.xcassets */; };
-		E9B556DA2668028A0066C8C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B556D82668028A0066C8C1 /* LaunchScreen.storyboard */; };
-		E9F33B4026694BEB00DF69D9 /* audioColor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E9F33B3F26694BEB00DF69D9 /* audioColor.mp3 */; };
-		E9F33B4A26695FA700DF69D9 /* saturationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F33B4926695FA700DF69D9 /* saturationViewController.swift */; };
-		E9F33B4C2669625500DF69D9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F33B4B2669625500DF69D9 /* GameViewController.swift */; };
+		C06226AF268924C1009595D2 /* SaturationGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06226AE268924C1009595D2 /* SaturationGameViewController.swift */; };
+		C06226B126892C54009595D2 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06226B026892C54009595D2 /* SoundController.swift */; };
+		C06226B32689371A009595D2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C06226B22689371A009595D2 /* backgroundMusic.mp3 */; };
+		C0B0F8CF268D51DC00F979AF /* ModesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8CE268D51DC00F979AF /* ModesCell.swift */; };
+		C0B0F8D9268D5B0800F979AF /* BrightnessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8D8268D5B0800F979AF /* BrightnessGameViewController.swift */; };
+		C0B0F8DB268D5B2F00F979AF /* BrightnessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8DA268D5B2F00F979AF /* BrightnessGameView.swift */; };
+		C0B0F8DD268D5B7200F979AF /* SaturationGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8DC268D5B7200F979AF /* SaturationGameView.swift */; };
+		C0B0F8DF268D6BE600F979AF /* EndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8DE268D6BE600F979AF /* EndGameView.swift */; };
+		C0B0F8E1268D6BF400F979AF /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8E0268D6BF400F979AF /* EndGameViewController.swift */; };
+		C0B0F8E3268D71EB00F979AF /* ColorFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8E2268D71EB00F979AF /* ColorFactView.swift */; };
+		C0E220FD268CDCA10060CD02 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E220FC268CDCA10060CD02 /* PauseView.swift */; };
+		C0E22116268CDEC10060CD02 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E22115268CDEC10060CD02 /* MenuView.swift */; };
+		C0E22118268CE2660060CD02 /* HueGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E22117268CE2660060CD02 /* HueGameView.swift */; };
+		C0E2211A268CF9C60060CD02 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E22119268CF9C60060CD02 /* SettingsViewController.swift */; };
+		C0E2211C268CF9FF0060CD02 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2211B268CF9FF0060CD02 /* SettingsView.swift */; };
+		C0E2211E268CFA6F0060CD02 /* Shrikhand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0E2211D268CFA6F0060CD02 /* Shrikhand-Regular.ttf */; };
+		C0E22122268D3BCC0060CD02 /* ModeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E22121268D3BCC0060CD02 /* ModeSelectView.swift */; };
+		C0F0BAF4268E57F30004466B /* LevelPoorSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0F0BAEF268E57F30004466B /* LevelPoorSound.wav */; };
+		C0F0BAF5268E57F30004466B /* LevelPerfectSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0F0BAF0268E57F30004466B /* LevelPerfectSound.wav */; };
+		C0F0BAF6268E57F30004466B /* LevelOkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0F0BAF1268E57F30004466B /* LevelOkSound.wav */; };
+		C0F0BAF7268E57F30004466B /* LevelVeryGoodSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0F0BAF2268E57F30004466B /* LevelVeryGoodSound.wav */; };
+		C0F0BAF8268E57F30004466B /* LevelGoodSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C0F0BAF3268E57F30004466B /* LevelGoodSound.wav */; };
+		C0F0BAFA268E682C0004466B /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0BAF9268E682C0004466B /* UINavigationControllerExtension.swift */; };
+		EE66ADCE268E0A4D00A374E0 /* DescriptionHueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66ADCD268E0A4D00A374E0 /* DescriptionHueView.swift */; };
+		EEB071202686526B0078BFBF /* ModeSelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0711F2686526B0078BFBF /* ModeSelectCollectionViewController.swift */; };
+		EEF4E69A2683CEB300EC5B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4E6992683CEB300EC5B38 /* AppDelegate.swift */; };
+		EEF4E69C2683CEB300EC5B38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4E69B2683CEB300EC5B38 /* SceneDelegate.swift */; };
+		EEF4E69E2683CEB300EC5B38 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4E69D2683CEB300EC5B38 /* MenuViewController.swift */; };
+		EEF4E6A32683CEB500EC5B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF4E6A22683CEB500EC5B38 /* Assets.xcassets */; };
+		EEF4E6A62683CEB500EC5B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF4E6A42683CEB500EC5B38 /* LaunchScreen.storyboard */; };
+		EEF4E6BA2683CF3B00EC5B38 /* HueGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4E6B62683CF3B00EC5B38 /* HueGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E922EF13267BD6470014612C /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
-		E9B556CA266802880066C8C1 /* Color Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9B556CD266802880066C8C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9B556CF266802880066C8C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9B556D1266802880066C8C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E9B556D4266802880066C8C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E9B556D62668028A0066C8C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E9B556D92668028A0066C8C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E9B556DB2668028A0066C8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9F33B3F26694BEB00DF69D9 /* audioColor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audioColor.mp3; sourceTree = "<group>"; };
-		E9F33B4926695FA700DF69D9 /* saturationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saturationViewController.swift; sourceTree = "<group>"; };
-		E9F33B4B2669625500DF69D9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C06226AE268924C1009595D2 /* SaturationGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationGameViewController.swift; sourceTree = "<group>"; };
+		C06226B026892C54009595D2 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
+		C06226B22689371A009595D2 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		C0B0F8CE268D51DC00F979AF /* ModesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesCell.swift; sourceTree = "<group>"; };
+		C0B0F8D8268D5B0800F979AF /* BrightnessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessGameViewController.swift; sourceTree = "<group>"; };
+		C0B0F8DA268D5B2F00F979AF /* BrightnessGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessGameView.swift; sourceTree = "<group>"; };
+		C0B0F8DC268D5B7200F979AF /* SaturationGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationGameView.swift; sourceTree = "<group>"; };
+		C0B0F8DE268D6BE600F979AF /* EndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameView.swift; sourceTree = "<group>"; };
+		C0B0F8E0268D6BF400F979AF /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		C0B0F8E2268D71EB00F979AF /* ColorFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFactView.swift; sourceTree = "<group>"; };
+		C0E220FC268CDCA10060CD02 /* PauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
+		C0E22115268CDEC10060CD02 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		C0E22117268CE2660060CD02 /* HueGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueGameView.swift; sourceTree = "<group>"; };
+		C0E22119268CF9C60060CD02 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C0E2211B268CF9FF0060CD02 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C0E2211D268CFA6F0060CD02 /* Shrikhand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shrikhand-Regular.ttf"; sourceTree = "<group>"; };
+		C0E22121268D3BCC0060CD02 /* ModeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectView.swift; sourceTree = "<group>"; };
+		C0F0BAEF268E57F30004466B /* LevelPoorSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LevelPoorSound.wav; sourceTree = "<group>"; };
+		C0F0BAF0268E57F30004466B /* LevelPerfectSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LevelPerfectSound.wav; sourceTree = "<group>"; };
+		C0F0BAF1268E57F30004466B /* LevelOkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LevelOkSound.wav; sourceTree = "<group>"; };
+		C0F0BAF2268E57F30004466B /* LevelVeryGoodSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LevelVeryGoodSound.wav; sourceTree = "<group>"; };
+		C0F0BAF3268E57F30004466B /* LevelGoodSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LevelGoodSound.wav; sourceTree = "<group>"; };
+		C0F0BAF9268E682C0004466B /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		EE66ADCD268E0A4D00A374E0 /* DescriptionHueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionHueView.swift; sourceTree = "<group>"; };
+		EEB0711F2686526B0078BFBF /* ModeSelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectCollectionViewController.swift; sourceTree = "<group>"; };
+		EEF4E6962683CEB300EC5B38 /* Color Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF4E6992683CEB300EC5B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEF4E69B2683CEB300EC5B38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EEF4E69D2683CEB300EC5B38 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EEF4E6A22683CEB500EC5B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEF4E6A52683CEB500EC5B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EEF4E6A72683CEB500EC5B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF4E6B62683CF3B00EC5B38 /* HueGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E9B556C7266802880066C8C1 /* Frameworks */ = {
+		EEF4E6932683CEB300EC5B38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,36 +87,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E9B556C1266802880066C8C1 = {
+		C0B0F8D0268D571E00F979AF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				E9B556CC266802880066C8C1 /* Color Guesser */,
-				E9B556CB266802880066C8C1 /* Products */,
+				EEF4E69D2683CEB300EC5B38 /* MenuViewController.swift */,
+				C0E22115268CDEC10060CD02 /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		C0B0F8D1268D572B00F979AF /* ModeSelect */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0711F2686526B0078BFBF /* ModeSelectCollectionViewController.swift */,
+				C0E22121268D3BCC0060CD02 /* ModeSelectView.swift */,
+				C0B0F8CE268D51DC00F979AF /* ModesCell.swift */,
+			);
+			path = ModeSelect;
+			sourceTree = "<group>";
+		};
+		C0B0F8D2268D574C00F979AF /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				C0B0F8D3268D575E00F979AF /* HueGame */,
+				C0B0F8D4268D576600F979AF /* SaturationGame */,
+				C0B0F8D5268D577000F979AF /* BrightnessGame */,
+				C0E220FC268CDCA10060CD02 /* PauseView.swift */,
+				C0B0F8E0268D6BF400F979AF /* EndGameViewController.swift */,
+				C0B0F8DE268D6BE600F979AF /* EndGameView.swift */,
+				C0B0F8E2268D71EB00F979AF /* ColorFactView.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		C0B0F8D3268D575E00F979AF /* HueGame */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4E6B62683CF3B00EC5B38 /* HueGameViewController.swift */,
+				C0E22117268CE2660060CD02 /* HueGameView.swift */,
+				EE66ADCD268E0A4D00A374E0 /* DescriptionHueView.swift */,
+			);
+			path = HueGame;
+			sourceTree = "<group>";
+		};
+		C0B0F8D4268D576600F979AF /* SaturationGame */ = {
+			isa = PBXGroup;
+			children = (
+				C06226AE268924C1009595D2 /* SaturationGameViewController.swift */,
+				C0B0F8DC268D5B7200F979AF /* SaturationGameView.swift */,
+			);
+			path = SaturationGame;
+			sourceTree = "<group>";
+		};
+		C0B0F8D5268D577000F979AF /* BrightnessGame */ = {
+			isa = PBXGroup;
+			children = (
+				C0B0F8D8268D5B0800F979AF /* BrightnessGameViewController.swift */,
+				C0B0F8DA268D5B2F00F979AF /* BrightnessGameView.swift */,
+			);
+			path = BrightnessGame;
+			sourceTree = "<group>";
+		};
+		C0B0F8D6268D578F00F979AF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C0E22119268CF9C60060CD02 /* SettingsViewController.swift */,
+				C0E2211B268CF9FF0060CD02 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C0B0F8D7268D57BD00F979AF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C0E2211D268CFA6F0060CD02 /* Shrikhand-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C0E22102268CDD740060CD02 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EEF4E6A22683CEB500EC5B38 /* Assets.xcassets */,
+				C06226B22689371A009595D2 /* backgroundMusic.mp3 */,
+				C0F0BAF3268E57F30004466B /* LevelGoodSound.wav */,
+				C0F0BAF1268E57F30004466B /* LevelOkSound.wav */,
+				C0F0BAF0268E57F30004466B /* LevelPerfectSound.wav */,
+				C0F0BAEF268E57F30004466B /* LevelPoorSound.wav */,
+				C0F0BAF2268E57F30004466B /* LevelVeryGoodSound.wav */,
+				C0B0F8D7268D57BD00F979AF /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EEF4E68D2683CEB300EC5B38 = {
+			isa = PBXGroup;
+			children = (
+				EEF4E6982683CEB300EC5B38 /* Color Guesser */,
+				EEF4E6972683CEB300EC5B38 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E9B556CB266802880066C8C1 /* Products */ = {
+		EEF4E6972683CEB300EC5B38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9B556CA266802880066C8C1 /* Color Guesser.app */,
+				EEF4E6962683CEB300EC5B38 /* Color Guesser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E9B556CC266802880066C8C1 /* Color Guesser */ = {
+		EEF4E6982683CEB300EC5B38 /* Color Guesser */ = {
 			isa = PBXGroup;
 			children = (
-				E9B556CD266802880066C8C1 /* AppDelegate.swift */,
-				E9B556CF266802880066C8C1 /* SceneDelegate.swift */,
-				E9B556D1266802880066C8C1 /* ViewController.swift */,
-				E922EF13267BD6470014612C /* SoundController.swift */,
-				E9B556D3266802880066C8C1 /* Main.storyboard */,
-				E9F33B4B2669625500DF69D9 /* GameViewController.swift */,
-				E9F33B4926695FA700DF69D9 /* saturationViewController.swift */,
-				E9F33B3F26694BEB00DF69D9 /* audioColor.mp3 */,
-				E9B556D62668028A0066C8C1 /* Assets.xcassets */,
-				E9B556D82668028A0066C8C1 /* LaunchScreen.storyboard */,
-				E9B556DB2668028A0066C8C1 /* Info.plist */,
+				C0E22102268CDD740060CD02 /* Assets */,
+				C0B0F8D0268D571E00F979AF /* Menu */,
+				C0B0F8D1268D572B00F979AF /* ModeSelect */,
+				C0B0F8D2268D574C00F979AF /* Games */,
+				C0B0F8D6268D578F00F979AF /* Settings */,
+				EEF4E6992683CEB300EC5B38 /* AppDelegate.swift */,
+				EEF4E69B2683CEB300EC5B38 /* SceneDelegate.swift */,
+				C06226B026892C54009595D2 /* SoundController.swift */,
+				EEF4E6A42683CEB500EC5B38 /* LaunchScreen.storyboard */,
+				C0F0BAF9268E682C0004466B /* UINavigationControllerExtension.swift */,
+				EEF4E6A72683CEB500EC5B38 /* Info.plist */,
 			);
 			path = "Color Guesser";
 			sourceTree = "<group>";
@@ -82,13 +217,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9B556C9266802880066C8C1 /* Color Guesser */ = {
+		EEF4E6952683CEB300EC5B38 /* Color Guesser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9B556DE2668028A0066C8C1 /* Build configuration list for PBXNativeTarget "Color Guesser" */;
+			buildConfigurationList = EEF4E6AA2683CEB500EC5B38 /* Build configuration list for PBXNativeTarget "Color Guesser" */;
 			buildPhases = (
-				E9B556C6266802880066C8C1 /* Sources */,
-				E9B556C7266802880066C8C1 /* Frameworks */,
-				E9B556C8266802880066C8C1 /* Resources */,
+				EEF4E6922683CEB300EC5B38 /* Sources */,
+				EEF4E6932683CEB300EC5B38 /* Frameworks */,
+				EEF4E6942683CEB300EC5B38 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -96,24 +231,24 @@
 			);
 			name = "Color Guesser";
 			productName = "Color Guesser";
-			productReference = E9B556CA266802880066C8C1 /* Color Guesser.app */;
+			productReference = EEF4E6962683CEB300EC5B38 /* Color Guesser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E9B556C2266802880066C8C1 /* Project object */ = {
+		EEF4E68E2683CEB300EC5B38 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					E9B556C9266802880066C8C1 = {
+					EEF4E6952683CEB300EC5B38 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = E9B556C5266802880066C8C1 /* Build configuration list for PBXProject "Color Guesser" */;
+			buildConfigurationList = EEF4E6912683CEB300EC5B38 /* Build configuration list for PBXProject "Color Guesser" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,59 +256,72 @@
 				en,
 				Base,
 			);
-			mainGroup = E9B556C1266802880066C8C1;
-			productRefGroup = E9B556CB266802880066C8C1 /* Products */;
+			mainGroup = EEF4E68D2683CEB300EC5B38;
+			productRefGroup = EEF4E6972683CEB300EC5B38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9B556C9266802880066C8C1 /* Color Guesser */,
+				EEF4E6952683CEB300EC5B38 /* Color Guesser */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E9B556C8266802880066C8C1 /* Resources */ = {
+		EEF4E6942683CEB300EC5B38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9B556DA2668028A0066C8C1 /* LaunchScreen.storyboard in Resources */,
-				E9F33B4026694BEB00DF69D9 /* audioColor.mp3 in Resources */,
-				E9B556D72668028A0066C8C1 /* Assets.xcassets in Resources */,
-				E9B556D5266802880066C8C1 /* Main.storyboard in Resources */,
+				C0F0BAF6268E57F30004466B /* LevelOkSound.wav in Resources */,
+				C0F0BAF8268E57F30004466B /* LevelGoodSound.wav in Resources */,
+				C0F0BAF4268E57F30004466B /* LevelPoorSound.wav in Resources */,
+				C0F0BAF7268E57F30004466B /* LevelVeryGoodSound.wav in Resources */,
+				EEF4E6A62683CEB500EC5B38 /* LaunchScreen.storyboard in Resources */,
+				C0E2211E268CFA6F0060CD02 /* Shrikhand-Regular.ttf in Resources */,
+				C0F0BAF5268E57F30004466B /* LevelPerfectSound.wav in Resources */,
+				EEF4E6A32683CEB500EC5B38 /* Assets.xcassets in Resources */,
+				C06226B32689371A009595D2 /* backgroundMusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E9B556C6266802880066C8C1 /* Sources */ = {
+		EEF4E6922683CEB300EC5B38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F33B4C2669625500DF69D9 /* GameViewController.swift in Sources */,
-				E922EF14267BD6470014612C /* SoundController.swift in Sources */,
-				E9B556D2266802880066C8C1 /* ViewController.swift in Sources */,
-				E9B556CE266802880066C8C1 /* AppDelegate.swift in Sources */,
-				E9F33B4A26695FA700DF69D9 /* saturationViewController.swift in Sources */,
-				E9B556D0266802880066C8C1 /* SceneDelegate.swift in Sources */,
+				C0E2211C268CF9FF0060CD02 /* SettingsView.swift in Sources */,
+				C0B0F8DF268D6BE600F979AF /* EndGameView.swift in Sources */,
+				C0B0F8E1268D6BF400F979AF /* EndGameViewController.swift in Sources */,
+				EEF4E6BA2683CF3B00EC5B38 /* HueGameViewController.swift in Sources */,
+				C0E22116268CDEC10060CD02 /* MenuView.swift in Sources */,
+				C0E220FD268CDCA10060CD02 /* PauseView.swift in Sources */,
+				EEB071202686526B0078BFBF /* ModeSelectCollectionViewController.swift in Sources */,
+				C0F0BAFA268E682C0004466B /* UINavigationControllerExtension.swift in Sources */,
+				C06226AF268924C1009595D2 /* SaturationGameViewController.swift in Sources */,
+				C0B0F8DB268D5B2F00F979AF /* BrightnessGameView.swift in Sources */,
+				EEF4E69E2683CEB300EC5B38 /* MenuViewController.swift in Sources */,
+				EEF4E69A2683CEB300EC5B38 /* AppDelegate.swift in Sources */,
+				EE66ADCE268E0A4D00A374E0 /* DescriptionHueView.swift in Sources */,
+				C0B0F8E3268D71EB00F979AF /* ColorFactView.swift in Sources */,
+				C0E2211A268CF9C60060CD02 /* SettingsViewController.swift in Sources */,
+				C0B0F8CF268D51DC00F979AF /* ModesCell.swift in Sources */,
+				C06226B126892C54009595D2 /* SoundController.swift in Sources */,
+				C0B0F8D9268D5B0800F979AF /* BrightnessGameViewController.swift in Sources */,
+				EEF4E69C2683CEB300EC5B38 /* SceneDelegate.swift in Sources */,
+				C0E22118268CE2660060CD02 /* HueGameView.swift in Sources */,
+				C0B0F8DD268D5B7200F979AF /* SaturationGameView.swift in Sources */,
+				C0E22122268D3BCC0060CD02 /* ModeSelectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E9B556D3266802880066C8C1 /* Main.storyboard */ = {
+		EEF4E6A42683CEB500EC5B38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E9B556D4266802880066C8C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E9B556D82668028A0066C8C1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9B556D92668028A0066C8C1 /* Base */,
+				EEF4E6A52683CEB500EC5B38 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -181,7 +329,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E9B556DC2668028A0066C8C1 /* Debug */ = {
+		EEF4E6A82683CEB500EC5B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +390,7 @@
 			};
 			name = Debug;
 		};
-		E9B556DD2668028A0066C8C1 /* Release */ = {
+		EEF4E6A92683CEB500EC5B38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,20 +445,20 @@
 			};
 			name = Release;
 		};
-		E9B556DF2668028A0066C8C1 /* Debug */ = {
+		EEF4E6AB2683CEB500EC5B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = B47883TN4D;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 337G99FP8D;
 				INFOPLIST_FILE = "Color Guesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.nathalia.Color-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -318,20 +466,20 @@
 			};
 			name = Debug;
 		};
-		E9B556E02668028A0066C8C1 /* Release */ = {
+		EEF4E6AC2683CEB500EC5B38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = B47883TN4D;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 337G99FP8D;
 				INFOPLIST_FILE = "Color Guesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.nathalia.Color-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -342,25 +490,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E9B556C5266802880066C8C1 /* Build configuration list for PBXProject "Color Guesser" */ = {
+		EEF4E6912683CEB300EC5B38 /* Build configuration list for PBXProject "Color Guesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E9B556DC2668028A0066C8C1 /* Debug */,
-				E9B556DD2668028A0066C8C1 /* Release */,
+				EEF4E6A82683CEB500EC5B38 /* Debug */,
+				EEF4E6A92683CEB500EC5B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9B556DE2668028A0066C8C1 /* Build configuration list for PBXNativeTarget "Color Guesser" */ = {
+		EEF4E6AA2683CEB500EC5B38 /* Build configuration list for PBXNativeTarget "Color Guesser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E9B556DF2668028A0066C8C1 /* Debug */,
-				E9B556E02668028A0066C8C1 /* Release */,
+				EEF4E6AB2683CEB500EC5B38 /* Debug */,
+				EEF4E6AC2683CEB500EC5B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E9B556C2266802880066C8C1 /* Project object */;
+	rootObject = EEF4E68E2683CEB300EC5B38 /* Project object */;
 }
