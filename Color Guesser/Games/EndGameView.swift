@@ -13,7 +13,7 @@ class EndGameView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        setBackground(image: UIImage(named: "Background")!)
         
         addSubview(modeCompleteStrokeLabel)
         addSubview(modeCompleteLabel)
@@ -43,7 +43,7 @@ class EndGameView: UIView {
         modeCompleteLabel.translatesAutoresizingMaskIntoConstraints = false
         modeCompleteStrokeLabel.translatesAutoresizingMaskIntoConstraints = false
         let settingsLabelConstraints: [NSLayoutConstraint] = [
-            modeCompleteStrokeLabel.topAnchor.constraint(equalTo: topAnchor,constant: 100),
+            modeCompleteStrokeLabel.topAnchor.constraint(equalTo: topAnchor, constant: 100),
             modeCompleteStrokeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             modeCompleteLabel.centerYAnchor.constraint(equalTo: modeCompleteStrokeLabel.centerYAnchor),
             modeCompleteLabel.centerXAnchor.constraint(equalTo: modeCompleteStrokeLabel.centerXAnchor)
@@ -60,7 +60,7 @@ class EndGameView: UIView {
             ])
         scoreTextLabel.translatesAutoresizingMaskIntoConstraints = false
         let scoreTextLabelConstraints: [NSLayoutConstraint] = [
-            scoreTextLabel.topAnchor.constraint(equalTo: modeCompleteLabel.bottomAnchor, constant: 50),
+            scoreTextLabel.topAnchor.constraint(equalTo: modeCompleteLabel.bottomAnchor, constant: 30),
             scoreTextLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
         NSLayoutConstraint.activate(scoreTextLabelConstraints)
@@ -71,11 +71,11 @@ class EndGameView: UIView {
             string: String(score),
             attributes: [
                 .foregroundColor: UIColor.white,
-                .font: UIFont.systemFont(ofSize: 80, weight: .bold)
+                .font: UIFont.systemFont(ofSize: 70, weight: .bold)
             ])
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         let scoreLabelConstraints: [NSLayoutConstraint] = [
-            scoreLabel.topAnchor.constraint(equalTo: scoreTextLabel.bottomAnchor, constant: 10),
+            scoreLabel.topAnchor.constraint(equalTo: scoreTextLabel.bottomAnchor, constant: 8),
             scoreLabel.centerXAnchor.constraint(equalTo: scoreTextLabel.centerXAnchor)
         ]
         NSLayoutConstraint.activate(scoreLabelConstraints)
@@ -84,29 +84,12 @@ class EndGameView: UIView {
         
         colorFactView.translatesAutoresizingMaskIntoConstraints = false
         let colorFactViewConstraints: [NSLayoutConstraint] = [
-            colorFactView.topAnchor.constraint(equalTo: modeCompleteLabel.bottomAnchor, constant: 240),
-            colorFactView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
-            colorFactView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
-            colorFactView.bottomAnchor.constraint(equalTo: playAgainButton.topAnchor, constant: -50)
+            colorFactView.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 30),
+            colorFactView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            colorFactView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            colorFactView.bottomAnchor.constraint(equalTo: playAgainButton.topAnchor, constant: -30)
         ]
         NSLayoutConstraint.activate(colorFactViewConstraints)
-        
-        // Back Button
-        
-        backButton.setTitle("BACK", for: .normal)
-        backButton.setTitleColor(.white, for: .normal)
-        backButton.backgroundColor = UIColor(white: 0.5, alpha: 1)
-        backButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .heavy)
-        backButton.layer.cornerRadius = 16
-        
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        let backButtonConstraints: [NSLayoutConstraint] = [
-            backButton.trailingAnchor.constraint(equalTo: playAgainButton.trailingAnchor),
-            backButton.leadingAnchor.constraint(equalTo: playAgainButton.leadingAnchor),
-            backButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
-            backButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2/3)
-        ]
-        NSLayoutConstraint.activate(backButtonConstraints)
         
         // Play Again Button
         
@@ -114,16 +97,33 @@ class EndGameView: UIView {
         playAgainButton.setTitleColor(.white, for: .normal)
         playAgainButton.backgroundColor = UIColor(white: 0.5, alpha: 1)
         playAgainButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .heavy)
-        playAgainButton.layer.cornerRadius = 16
+        playAgainButton.layer.cornerRadius = 10
         
         playAgainButton.translatesAutoresizingMaskIntoConstraints = false
         let playAgainButtonConstraints: [NSLayoutConstraint] = [
-            playAgainButton.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 50),
-            playAgainButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -50),
-            playAgainButton.bottomAnchor.constraint(equalTo: backButton.topAnchor, constant: -16),
-            playAgainButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2/3)
+            playAgainButton.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 60),
+            playAgainButton.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -60),
+            playAgainButton.topAnchor.constraint(equalTo: centerYAnchor, constant: 165),
+            playAgainButton.heightAnchor.constraint(equalToConstant: 50)
         ]
         NSLayoutConstraint.activate(playAgainButtonConstraints)
+        
+        // Back Button
+        
+        backButton.setTitle("BACK", for: .normal)
+        backButton.setTitleColor(.white, for: .normal)
+        backButton.backgroundColor = UIColor(white: 0.5, alpha: 1)
+        backButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .heavy)
+        backButton.layer.cornerRadius = 10
+        
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        let backButtonConstraints: [NSLayoutConstraint] = [
+            backButton.trailingAnchor.constraint(equalTo: playAgainButton.trailingAnchor),
+            backButton.leadingAnchor.constraint(equalTo: playAgainButton.leadingAnchor),
+            backButton.topAnchor.constraint(equalTo: playAgainButton.bottomAnchor, constant: 15),
+            backButton.heightAnchor.constraint(equalToConstant: 50)
+        ]
+        NSLayoutConstraint.activate(backButtonConstraints)
     }
     
     required init?(coder: NSCoder) {

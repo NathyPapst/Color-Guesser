@@ -90,7 +90,7 @@ class HueGameViewController: UIViewController {
     }
     
     @objc func quitGame() {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToViewController(ofClass: ModeSelectViewController.self, animated: true)
     }
 
     @objc func toggleMusic() {

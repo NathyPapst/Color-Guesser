@@ -37,7 +37,6 @@ class HueGameView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        
         backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.15, alpha: 1)
         
         addSubview(outerCircle)
@@ -60,7 +59,7 @@ class HueGameView: UIView {
         outerCircle.translatesAutoresizingMaskIntoConstraints = false
         let outerCircleConstraints: [NSLayoutConstraint] = [
             outerCircle.centerXAnchor.constraint(equalTo: centerXAnchor),
-            outerCircle.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 50),
+            outerCircle.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 40),
             outerCircle.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.75),
             outerCircle.heightAnchor.constraint(equalTo: outerCircle.widthAnchor),
         ]
@@ -74,10 +73,8 @@ class HueGameView: UIView {
         innerCircle.translatesAutoresizingMaskIntoConstraints = false
         let innerCircleConstraints: [NSLayoutConstraint] = [
             innerCircle.centerXAnchor.constraint(equalTo: centerXAnchor),
-            innerCircle.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 50),
-            
+            innerCircle.centerYAnchor.constraint(equalTo: outerCircle.centerYAnchor),
             innerCircle.widthAnchor.constraint(equalTo: outerCircle.widthAnchor, multiplier: 0.5),
-            
             innerCircle.heightAnchor.constraint(equalTo: outerCircle.heightAnchor, multiplier: 0.5)
         ]
         NSLayoutConstraint.activate(innerCircleConstraints)
@@ -90,7 +87,7 @@ class HueGameView: UIView {
         let sliderConstraints: [NSLayoutConstraint] = [
             hueSlider.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -50),
             hueSlider.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 50),
-            hueSlider.topAnchor.constraint(equalTo: outerCircle.bottomAnchor, constant: 100)
+            hueSlider.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
         ]
         NSLayoutConstraint.activate(sliderConstraints)
         
@@ -100,14 +97,14 @@ class HueGameView: UIView {
         let config = UIImage.SymbolConfiguration(pointSize: 30, weight: .heavy, scale: .default)
         let pause = UIImage(systemName: "pause", withConfiguration: config)
         pauseButton.setImage(pause, for: .normal)
-        pauseButton.layer.cornerRadius = 8
+        pauseButton.layer.cornerRadius = 10
         pauseButton.tintColor = .white
         
         pauseButton.translatesAutoresizingMaskIntoConstraints = false
         let pauseButtonConstraints: [NSLayoutConstraint] = [
             pauseButton.widthAnchor.constraint(equalToConstant: 50),
             pauseButton.heightAnchor.constraint(equalToConstant: 50),
-            pauseButton.topAnchor.constraint(equalTo: topAnchor, constant: 80),
+            pauseButton.bottomAnchor.constraint(equalTo: levels[0].topAnchor, constant: 50-UIScreen.main.bounds.width*0.18375),
             pauseButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30)
         ]
         NSLayoutConstraint.activate(pauseButtonConstraints)
@@ -116,14 +113,14 @@ class HueGameView: UIView {
         
         for i in 0..<levels.count {
             levels[i].backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 0.5, alpha: 1)
-            levels[i].layer.cornerRadius = 8
+            levels[i].layer.cornerRadius = 10
             
             levels[i].translatesAutoresizingMaskIntoConstraints = false
             let levelConstraints: [NSLayoutConstraint] = [
                 levels[i].widthAnchor.constraint(equalToConstant: 50),
                 levels[i].heightAnchor.constraint(equalToConstant: 50),
-                levels[i].bottomAnchor.constraint(equalTo: outerCircle.topAnchor, constant: -100),
-                levels[i].trailingAnchor.constraint(equalTo: trailingAnchor,constant: CGFloat(-310+(i*70))),
+                levels[i].topAnchor.constraint(equalTo: topAnchor, constant: 150),
+                levels[i].leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat(30+(CGFloat(i)*UIScreen.main.bounds.width*0.18375))),
             ]
             NSLayoutConstraint.activate(levelConstraints)
         }

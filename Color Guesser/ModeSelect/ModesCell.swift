@@ -3,11 +3,24 @@ import UIKit
 class ModesCell: UICollectionViewCell {
     
     let modeButton = UIButton()
+    let modeLabel = UILabel()
     var modesData: ModesData? {
         didSet {
             guard let modesData = modesData else { return }
             modeButton.tag = modesData.tag
-            modeButton.setImage(modesData.image, for: .normal)
+            let background = UIImageView(image: modesData.image)
+            contentView.addSubview(background)
+            background.clipsToBounds = true
+            background.layer.cornerRadius = 20
+            background.contentMode = .scaleAspectFill
+            background.translatesAutoresizingMaskIntoConstraints = false
+            let backgroundConstraints: [NSLayoutConstraint] = [
+                background.topAnchor.constraint(equalTo: contentView.topAnchor),
+                background.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+                background.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+                background.heightAnchor.constraint(equalTo: contentView.heightAnchor)
+            ]
+            NSLayoutConstraint.activate(backgroundConstraints)
         }
     }
     
@@ -16,17 +29,12 @@ class ModesCell: UICollectionViewCell {
         
         contentView.addSubview(modeButton)
         
-        modeButton.contentMode = .scaleAspectFill
-        modeButton.clipsToBounds = true
-        modeButton.layer.cornerRadius = 30
-        modeButton.adjustsImageWhenHighlighted = false
-        
         modeButton.translatesAutoresizingMaskIntoConstraints = false
         let backgroundConstraints: [NSLayoutConstraint] = [
-            modeButton.topAnchor.constraint(equalTo: contentView.topAnchor),
-            modeButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            modeButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            modeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            modeButton.topAnchor.constraint(equalTo: topAnchor),
+            modeButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            modeButton.leadingAnchor.constraint(equalTo: leadingAnchor),
+            modeButton.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
         NSLayoutConstraint.activate(backgroundConstraints)
     }

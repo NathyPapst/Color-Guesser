@@ -10,6 +10,7 @@
 		C06226AF268924C1009595D2 /* SaturationGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06226AE268924C1009595D2 /* SaturationGameViewController.swift */; };
 		C06226B126892C54009595D2 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06226B026892C54009595D2 /* SoundController.swift */; };
 		C06226B32689371A009595D2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C06226B22689371A009595D2 /* backgroundMusic.mp3 */; };
+		C092339D268F570600821265 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092339C268F570600821265 /* UIViewExtension.swift */; };
 		C0B0F8CF268D51DC00F979AF /* ModesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8CE268D51DC00F979AF /* ModesCell.swift */; };
 		C0B0F8D9268D5B0800F979AF /* BrightnessGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8D8268D5B0800F979AF /* BrightnessGameViewController.swift */; };
 		C0B0F8DB268D5B2F00F979AF /* BrightnessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0F8DA268D5B2F00F979AF /* BrightnessGameView.swift */; };
@@ -44,6 +45,7 @@
 		C06226AE268924C1009595D2 /* SaturationGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationGameViewController.swift; sourceTree = "<group>"; };
 		C06226B026892C54009595D2 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
 		C06226B22689371A009595D2 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		C092339C268F570600821265 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C0B0F8CE268D51DC00F979AF /* ModesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesCell.swift; sourceTree = "<group>"; };
 		C0B0F8D8268D5B0800F979AF /* BrightnessGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessGameViewController.swift; sourceTree = "<group>"; };
 		C0B0F8DA268D5B2F00F979AF /* BrightnessGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessGameView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C092339E268F6A3500821265 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0F0BAF9268E682C0004466B /* UINavigationControllerExtension.swift */,
+				C092339C268F570600821265 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C0B0F8D0268D571E00F979AF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,11 +215,11 @@
 				C0B0F8D1268D572B00F979AF /* ModeSelect */,
 				C0B0F8D2268D574C00F979AF /* Games */,
 				C0B0F8D6268D578F00F979AF /* Settings */,
+				C092339E268F6A3500821265 /* Extensions */,
 				EEF4E6992683CEB300EC5B38 /* AppDelegate.swift */,
 				EEF4E69B2683CEB300EC5B38 /* SceneDelegate.swift */,
 				C06226B026892C54009595D2 /* SoundController.swift */,
 				EEF4E6A42683CEB500EC5B38 /* LaunchScreen.storyboard */,
-				C0F0BAF9268E682C0004466B /* UINavigationControllerExtension.swift */,
 				EEF4E6A72683CEB500EC5B38 /* Info.plist */,
 			);
 			path = "Color Guesser";
@@ -309,6 +320,7 @@
 				C06226B126892C54009595D2 /* SoundController.swift in Sources */,
 				C0B0F8D9268D5B0800F979AF /* BrightnessGameViewController.swift in Sources */,
 				EEF4E69C2683CEB300EC5B38 /* SceneDelegate.swift in Sources */,
+				C092339D268F570600821265 /* UIViewExtension.swift in Sources */,
 				C0E22118268CE2660060CD02 /* HueGameView.swift in Sources */,
 				C0B0F8DD268D5B7200F979AF /* SaturationGameView.swift in Sources */,
 				C0E22122268D3BCC0060CD02 /* ModeSelectView.swift in Sources */,
@@ -451,14 +463,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 337G99FP8D;
 				INFOPLIST_FILE = "Color Guesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.nathalia.Color-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -472,14 +484,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 337G99FP8D;
 				INFOPLIST_FILE = "Color Guesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.dev.nathalia.Color-Guesser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

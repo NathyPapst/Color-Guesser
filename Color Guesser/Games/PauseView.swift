@@ -48,7 +48,7 @@ class PauseView: UIView {
             attributes: [
                 .foregroundColor: UIColor.white,
                 .kern: 0,
-                .font: UIFont(name: "Shrikhand-Regular", size: 40) as Any
+                .font: UIFont(name: "Shrikhand-Regular", size: 50) as Any
             ])
         pauseStrokeLabel.attributedText = NSAttributedString(
             string: " Paused ",
@@ -56,12 +56,12 @@ class PauseView: UIView {
                 .strokeColor: UIColor.black,
                 .strokeWidth: 16,
                 .kern: 0,
-                .font: UIFont(name: "Shrikhand-Regular", size: 40) as Any
+                .font: UIFont(name: "Shrikhand-Regular", size: 50) as Any
             ])
         pauseLabel.translatesAutoresizingMaskIntoConstraints = false
         pauseStrokeLabel.translatesAutoresizingMaskIntoConstraints = false
         let pauseLabelConstraints: [NSLayoutConstraint] = [
-            pauseStrokeLabel.topAnchor.constraint(equalTo: container.topAnchor,constant: 40),
+            pauseStrokeLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 30),
             pauseStrokeLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             pauseLabel.centerYAnchor.constraint(equalTo: pauseStrokeLabel.centerYAnchor),
             pauseLabel.centerXAnchor.constraint(equalTo: pauseStrokeLabel.centerXAnchor)
@@ -74,14 +74,14 @@ class PauseView: UIView {
         resumeButton.setTitleColor(.white, for: .normal)
         resumeButton.backgroundColor = UIColor(white: 0.15, alpha: 1)
         resumeButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .heavy)
-        resumeButton.layer.cornerRadius = 16
+        resumeButton.layer.cornerRadius = 10
         
         resumeButton.translatesAutoresizingMaskIntoConstraints = false
         let resumeButtonConstraints: [NSLayoutConstraint] = [
-            resumeButton.topAnchor.constraint(equalTo: pauseLabel.bottomAnchor, constant: 50),
-            resumeButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2/3),
+            resumeButton.topAnchor.constraint(equalTo: pauseLabel.bottomAnchor, constant: 20),
             resumeButton.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 50),
-            resumeButton.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -50)
+            resumeButton.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -50),
+            resumeButton.heightAnchor.constraint(equalToConstant: 50)
         ]
         NSLayoutConstraint.activate(resumeButtonConstraints)
         
@@ -108,11 +108,11 @@ class PauseView: UIView {
         quitButton.setTitleColor(.white, for: .normal)
         quitButton.backgroundColor = UIColor(white: 0.15, alpha: 1)
         quitButton.titleLabel?.font = .systemFont(ofSize: 30, weight: .heavy)
-        quitButton.layer.cornerRadius = 16
+        quitButton.layer.cornerRadius = 10
                 
         quitButton.translatesAutoresizingMaskIntoConstraints = false
         let exitButtonConstraints: [NSLayoutConstraint] = [
-            quitButton.topAnchor.constraint(equalTo: resumeButton.bottomAnchor, constant: 16),
+            quitButton.topAnchor.constraint(equalTo: resumeButton.bottomAnchor, constant: 15),
             quitButton.heightAnchor.constraint(equalTo: resumeButton.heightAnchor),
             quitButton.leadingAnchor.constraint(equalTo: resumeButton.leadingAnchor),
             quitButton.trailingAnchor.constraint(equalTo: resumeButton.trailingAnchor)
@@ -127,7 +127,7 @@ class PauseView: UIView {
         musicButton.setImage(SoundController.shared.musicMuted ? musicOffImage : musicOnImage, for: .normal)
         musicButton.tintColor = .white
         musicButton.backgroundColor = UIColor(white: 0.15, alpha: 1)
-        musicButton.layer.cornerRadius = 16
+        musicButton.layer.cornerRadius = 10
         
         musicButton.translatesAutoresizingMaskIntoConstraints = false
         let musicButtonConstraints: [NSLayoutConstraint] = [
@@ -148,7 +148,7 @@ class PauseView: UIView {
         soundButton.setImage(SoundController.shared.soundMuted ? soundOffImage : soundOnImage, for: .normal)
         soundButton.tintColor = .white
         soundButton.backgroundColor = UIColor(white: 0.15, alpha: 1)
-        soundButton.layer.cornerRadius = 16
+        soundButton.layer.cornerRadius = 10
         
         soundButton.translatesAutoresizingMaskIntoConstraints = false
         let soundButtonConstraints: [NSLayoutConstraint] = [

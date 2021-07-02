@@ -2,7 +2,8 @@ import UIKit
 
 struct ModesData {
     var tag: Int
-    var image: UIImage
+    var label: String
+    var image: UIImage!
 }
 
 class ModeSelectView: UIView {
@@ -10,9 +11,9 @@ class ModeSelectView: UIView {
     let modeSelectLabel = UILabel()
     let modeSelectLabelStroke = UILabel()
     let modesData = [
-        ModesData(tag: 0, image: UIImage(named: "hue")!),
-        ModesData(tag: 1, image: UIImage(named: "sat")!),
-        ModesData(tag: 2, image: UIImage(named: "bright")!)
+        ModesData(tag: 0, label: "HUE", image: UIImage(named: "hue")),
+        ModesData(tag: 1, label: "SATURATION", image: UIImage(named: "sat")),
+        ModesData(tag: 2, label: "BRIGHTNESS", image: UIImage(named: "bright"))
     ]
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -21,13 +22,14 @@ class ModeSelectView: UIView {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(ModesCell.self, forCellWithReuseIdentifier: "cell")
+        cv.showsHorizontalScrollIndicator = false
         return cv
     }()
     let backButton = UIButton(type: .system)
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        setBackground(image: UIImage(named: "Background")!)
         
         addSubview(modeSelectLabelStroke)
         addSubview(modeSelectLabel)
@@ -41,7 +43,7 @@ class ModeSelectView: UIView {
             attributes: [
                 .foregroundColor: UIColor.white,
                 .kern: 0,
-                .font: UIFont(name: "Shrikhand-Regular", size: 40) as Any
+                .font: UIFont(name: "Shrikhand-Regular", size: 50) as Any
             ])
         modeSelectLabelStroke.attributedText = NSAttributedString(
             string: " Mode Select ",
@@ -49,7 +51,7 @@ class ModeSelectView: UIView {
                 .strokeColor: UIColor.black,
                 .strokeWidth: 16,
                 .kern: 0,
-                .font: UIFont(name: "Shrikhand-Regular", size: 40) as Any
+                .font: UIFont(name: "Shrikhand-Regular", size: 50) as Any
             ])
         modeSelectLabel.translatesAutoresizingMaskIntoConstraints = false
         modeSelectLabelStroke.translatesAutoresizingMaskIntoConstraints = false
@@ -68,13 +70,13 @@ class ModeSelectView: UIView {
             collectionView.topAnchor.constraint(equalTo: modeSelectLabel.bottomAnchor, constant: 50),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -200)
+            collectionView.bottomAnchor.constraint(equalTo: backButton.topAnchor, constant: -50)
         ]
         NSLayoutConstraint.activate(collectionViewConstraints)
         
         // Back Button
         
-        let backImageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .heavy, scale: .default)
+        let backImageConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .heavy, scale: .default)
         let backImage = UIImage(systemName: "chevron.backward", withConfiguration: backImageConfig)
         backButton.setImage(backImage, for: .normal)
         backButton.setAttributedTitle(NSAttributedString(
@@ -85,14 +87,14 @@ class ModeSelectView: UIView {
                                         ]), for: .normal)
         backButton.backgroundColor = UIColor(white: 0.5, alpha: 1)
         backButton.tintColor = .white
-        backButton.layer.cornerRadius = 15
+        backButton.layer.cornerRadius = 10
 
         backButton.translatesAutoresizingMaskIntoConstraints = false
         let backButtonConstraints: [NSLayoutConstraint] = [
-            backButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            backButton.topAnchor.constraint(equalTo: centerYAnchor, constant: 230),
             backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
-            backButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3),
-            backButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2/3)
+            backButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/4),
+            backButton.heightAnchor.constraint(equalToConstant: 50)
         ]
         NSLayoutConstraint.activate(backButtonConstraints)
     }
