@@ -1,2 +1,2 @@
 # Color Guesser
-Color Guesser é um jogo sobre teoria das cores. Nele você deve passar pro níveis para descobrir a matiz correta da cor do círculo maior.
+Color Guesser is a game about color theory. In it you must go through levels to find out the right color hue of the bigger circle.
